@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Tarefas</title>
+    <link rel="stylesheet" href="styles/cadastrar.css">
+</head>
+<body>
+    <div id="modal">
+        <div class="conteudo">
+            <p>Compra adicionada com sucesso</p>
+            <img src="imgs/ok.png" alt="Ok">
+            <div>
+                <input type="button" value="Adicionar Outra" id="btnAdd">
+                <a href="listaT.html"><input type="button" value="Visualizar" id="btnShow"></a>
+            </div>
+        </div>
+    </div>
+    <form action="" method="post">
+        <h1 id="user"></h1>
+        <div class="label-flutuante">
+            <input type="text" name="nome" id="txtNome" placeholder=" " required>
+            <label for="txtNome">Nome do produto</label>
+        </div>
+        <div class="label-flutuante">
+            <input type="number" name="preco" id="txtPreco" step="0.1" placeholder=" " required>
+            <label for="txtPreco">Preço Unitário</label>
+        </div>
+        <div class="label-flutuante">
+            <input type="number" name="qtd" id="txtQtd" placeholder=" " required>
+            <label for="txtQtd">Quantidade</label>
+        </div>
+        <div class="btns">
+            <input type="submit" value="Cadastrar" id="btnCadastrar">
+            <input type="reset" value="Limpar" id="btnLimpar">
+        </div>
+    </form>
+   
+    <script src="script/cadastrar.js"></script>
+</body>
+</html>

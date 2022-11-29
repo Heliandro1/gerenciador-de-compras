@@ -1,0 +1,133 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+form{
+    width: 50vw;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding: 10px;
+    margin: 50px auto;
+    border: 1px solid black;
+    border-image: linear-gradient(to bottom, white, rgb(240, 236, 236));
+    border-radius: 10px;
+    background-image: linear-gradient(to bottom, white, rgb(240, 236, 236));
+}
+#btnShow{
+    height: 40px;
+    width: 150px;
+    border: none;
+    border-radius: 10px;
+    color: black;
+    font-weight: bold;
+    font-size: 1em;
+    font-variant: small-caps;
+}
+#btnShow:hover{
+    transform: translate(-3px, 3px);
+    background-color: green;
+    color: white;
+    cursor: pointer;
+    transition: all 1s;
+}
+#modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0, 0.4);
+}
+#modal .conteudo{
+    background-color: rgb(247, 244, 240);
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 5px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#modal img{
+    display: block;
+    margin: 30px auto;
+}
+#modal p{
+    margin-top: 40px;
+    text-align: center;
+    color: gray;
+    font-variant: small-caps;
+}
+#btnNewUser{
+    width: 200px;
+    height: 50px;
+    font-weight: bold;
+    border: none;
+    font-size: 1em;
+}
+#btnNewUser:hover{
+    color: white;
+    cursor: pointer;
+    transform: translate(-3px, 3px);
+    background-color: green;
+    border-radius: 5px;
+    transition: all 1s;
+}
+.label-flutuante{
+    position: relative;
+    padding-top: 13px;
+}
+.label-flutuante input{
+    border: 1px solid rgb(194, 193, 193);
+    border-radius: 5px;
+    outline: none;
+    width: 300px;
+    padding: 15px 20px;
+    font-size: 12px;
+    transition: all 0.5s linear;
+}
+.label-flutuante input:focus{
+    border: 1px solid darkred;
+}
+
+.label-flutuante input::placeholder{
+    color: transparent;
+}
+
+.label-flutuante label{
+    pointer-events: none;
+    position: absolute;
+    top: calc(50% - 8px);
+    left: 15px;
+    transition: all 0.5s linear;
+    background-color: white;
+    padding: 5px;
+    box-sizing: border-box;
+}
+.label-flutuante input:required:invalid+label{
+    color: red;
+}
+.label-flutuante input:focus:required:invalid{
+    border: 2px solid red;
+}
+.label-flutuante input:required:invalid+label::before{
+    content: '*';
+}
+.label-flutuante input:focus+label, .label-flutuante input:not(:placeholder-shown)+label{
+    font-size: 13px;
+    top: 0;
+    color: red;
+}

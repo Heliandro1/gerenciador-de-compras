@@ -1,0 +1,103 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    height: 50vh;
+    padding: 20px;
+    margin: 50px auto;
+    border: 1px solid black;
+    border-image: linear-gradient(to bottom, white, rgb(240, 236, 236));
+    border-radius: 10px;
+    background-image: linear-gradient(to bottom, white, rgb(240, 236, 236));
+    overflow: auto;
+}
+section > div > p{
+    font-variant: small-caps;
+    text-align: center;
+    color: gray;
+}
+section > div{
+    display: none;
+    flex-direction: column;
+    height: 170px;
+    width: 30%;
+    align-self: center;
+    background-color: transparent;
+    border: none;
+}
+section > div:hover{
+    transform: none;
+}
+h1{
+    text-align: center;
+    font-variant: small-caps;
+}
+li{
+    margin-bottom: -10px;
+    list-style-image: url(../imgs/user.png);
+}
+.apagar{
+    border: none;
+    font-variant: small-caps;
+}
+nav{
+    display: flex;
+    justify-content: center;
+}
+.newuser{
+    height: 40px;
+    font-variant: small-caps;
+    background-color: white;
+    font-weight: bold;
+    border: 1px solid white;
+    font-size: 1em;
+
+}
+.newuser:hover{
+    border-radius: 5px;
+    cursor: pointer;
+}
+.apagar:hover{
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: rgb(202, 14, 14);
+    border-radius: 5px;
+}
+.show{
+    border: none;
+    font-variant: small-caps;
+    height: 50px;
+}
+.show:hover, div > a:hover{
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: green;
+    border-radius: 5px;
+}
+div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 50px;
+    width: 95%;
+    margin-left: 10px;
+    margin-right: 5px;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+div:hover{
+    transform: translate(-5px, -5px);
+    transition: border-radius, transform 1s;
+}

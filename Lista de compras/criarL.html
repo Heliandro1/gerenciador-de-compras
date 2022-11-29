@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Usuário</title>
+    <link rel="stylesheet" href="styles/criarL.css">
+</head>
+<body>
+    <div id="modal">
+        <div class="conteudo">
+            <p>Usuário cadastrado com sucesso</p>
+            <img src="imgs/ok.png" alt="Ok">
+            <div>
+                <a href="index.html"><input type="button" value="Visualizar" id="btnShow"></a>
+            </div>
+        </div>
+    </div>
+    <form action="" method="post">
+        <h1>Novo Usuário</h1>
+        <div class="label-flutuante">
+            <input type="text" name="username" id="txtUserName" placeholder=" " required minlength="5" autocomplete="off">
+            <label for="txtUserName">Nome do Usuário</label>
+        </div>
+        <input type="submit" value="Cadastrar" id="btnNewUser">
+    </form>
+    <script src="script/novouser.js"></script>
+</body>
+</html>
